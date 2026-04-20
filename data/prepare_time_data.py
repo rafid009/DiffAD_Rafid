@@ -118,6 +118,9 @@ class PrepareTimeData:
         elif data_name.upper().find('SMD') != -1:
             cols = [0, 1, 3, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 28, 33, 35, 36, 37]
             self.get_dataset(data_path, cols)
+        elif data_name.upper().find('SWAT') != -1:
+            cols = [-1]
+            self.get_dataset(data_path, cols)
 
     def get_dataset(self, data_path, cols):
         if self.phase == 'train':

@@ -15,7 +15,7 @@
     "test": {
       "name": "swat_test",
       "mode": "HR",
-      "dataroot": "tf_dataset/swat/SWaT_minute_segments_anomaly.csv",
+      "dataroot": "tf_dataset/swat/swat_test.csv",
       "datatype": "time",
       "l_resolution": 16,
       "r_resolution": 128,

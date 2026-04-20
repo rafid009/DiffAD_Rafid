@@ -15,7 +15,7 @@
     "train": {
       "name": "swat_train",
       "mode": "HR",
-      "dataroot": "tf_dataset/swat/SWaT_minute_segments_normal.csv",
+      "dataroot": "tf_dataset/swat/swat_train.csv",
       "datatype": "time",
       "l_resolution": 16,
       "r_resolution": 128,
