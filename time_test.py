@@ -64,11 +64,13 @@ def time_test(params, strategy_params, temp_list):
         sr_datas.drop(index=[i], inplace=True)
         differ_datas.drop(index=[i], inplace=True)
 
-    f1 = Metrics.relabeling_strategy(all_datas, strategy_params)
+    prc, rcl, f1 = Metrics.relabeling_strategy(all_datas, strategy_params)
 
     temp_f1 = Decimal(f1).quantize(Decimal("0.0000"))
 
     print('F1-score: ', float(temp_f1))
+    print('Precision: ', float(Decimal(prc).quantize(Decimal("0.0000"))))
+    print('Recall: ', float(Decimal(rcl).quantize(Decimal("0.0000"))))
 
 
 # evaluate model performance

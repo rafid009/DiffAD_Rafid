@@ -9,7 +9,7 @@
     "tb_logger": "tb_logger",
     "results": "results",
     "checkpoint": "checkpoint",
-    "resume_state": "experiments/SWAT_TRAIN_16_128_100/checkpoint/E100"
+    "resume_state": "experiments/SWAT_TRAIN_16_128_100/checkpoint/E1000"
   },
   "datasets": {
     "test": {
