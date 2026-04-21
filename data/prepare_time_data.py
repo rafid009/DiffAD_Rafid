@@ -121,6 +121,9 @@ class PrepareTimeData:
         elif data_name.upper().find('SWAT') != -1:
             cols = [-1]
             self.get_dataset(data_path, cols)
+        elif data_name.upper().find('SYNTH') != -1:
+            cols = [-1]
+            self.get_dataset(data_path, cols)
 
     def get_dataset(self, data_path, cols):
         if self.phase == 'train':
