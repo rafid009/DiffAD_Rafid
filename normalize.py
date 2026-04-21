@@ -10,9 +10,9 @@ synth_train = pd.read_csv(f"{synth_folder}/synth_train.csv")
 synth_test = pd.read_csv(f"{synth_folder}/synth_test.csv")
 
 swat_mean = swat_train.to_numpy().nanmean(axis=0)
-synth_mean = synth_train.to_numpy()..nanmean(axis=0)
-swat_std = swat_train.to_numpy()..nanstd(axis=0)
-synth_std = synth_train.to_numpy()..nanstd(axis=0)
+synth_mean = synth_train.to_numpy().nanmean(axis=0)
+swat_std = swat_train.to_numpy().nanstd(axis=0)
+synth_std = synth_train.to_numpy().nanstd(axis=0)
 swat_train = (swat_train - swat_mean) / swat_std
 swat_train.to_csv(f"{swat_folder}/swat_train.csv", index=False)
 swat_test = (swat_test - swat_mean) / swat_std
