@@ -50,9 +50,9 @@
       },
       "test": {
         "schedule": "linear",
-        "start_label": 0.1,
-        "end_label": 3,
-        "step_label": 0.1,
+        "start_label": 1,
+        "end_label": 2001,
+        "step_label": 1,
         "step_t": 1000,
         "n_timestep": 100,
         "linear_start": 1e-6,
