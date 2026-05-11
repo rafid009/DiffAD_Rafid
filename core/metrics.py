@@ -105,7 +105,7 @@ def relabeling_strategy(df, params):
 
     df_sort = df.sort_values(by="differ", ascending=False)
     df_sort = df_sort.reset_index(drop=False)
-    precision, recall, _ = precision_recall_curve(df_sort['label'].tolist(), df_sort['pred_label'].tolist())
+    precision, recall, _ = precision_recall_curve(df_sort['label'].tolist(), df_sort['differ'].tolist())
     pr_auc = auc(recall, precision)
     print(f"Precision-Recall AUC: {pr_auc:.4f}")
     for t in thresholds:
