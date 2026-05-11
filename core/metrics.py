@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.metrics import f1_score, accuracy_score, recall_score, precision_score, mean_squared_error
-
+from sklearn.metrics import precision_recall_curve, auc
 
 def squeeze_tensor(tensor):
     return tensor.squeeze().cpu()
@@ -105,7 +105,9 @@ def relabeling_strategy(df, params):
 
     df_sort = df.sort_values(by="differ", ascending=False)
     df_sort = df_sort.reset_index(drop=False)
-
+    precision, recall, _ = precision_recall_curve(df_sort['label'].tolist(), df_sort['pred_label'].tolist())
+    pr_auc = auc(recall, precision)
+    print(f"Precision-Recall AUC: {pr_auc:.4f}")
     for t in thresholds:
         # if (t - 1) % params['step_t'] == 0:
         #     print("t: ", t)
