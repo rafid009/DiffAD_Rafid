@@ -51,7 +51,7 @@
       "test": {
         "schedule": "linear",
         "start_label": 1,
-        "end_label": 2001,
+        "end_label": 3001,
         "step_label": 1,
         "step_t": 1000,
         "n_timestep": 100,

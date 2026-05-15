@@ -112,16 +112,16 @@ def relabeling_strategy(df, params):
         # if (t - 1) % params['step_t'] == 0:
         #     print("t: ", t)
         y_true, y_pred, thred = predict_labels(df_sort, t)
-        for i in range(len(y_true)):
-            if y_pred[i] == 1 and y_true[i] == 1:
-                j = i - 1
-                while j >= 0 and y_true[j] == 1 and y_pred[j] == 0:
-                    y_pred[j] = 1
-                    j -= 1
-                j = i + 1
-                while j < len(y_pred) and y_true[j] == 1 and y_pred[j] == 0:
-                    y_pred[j] = 1
-                    j += 1
+        # for i in range(len(y_true)):
+            # if y_pred[i] == 1 and y_true[i] == 1:
+            #     j = i - 1
+            #     while j >= 0 and y_true[j] == 1 and y_pred[j] == 0:
+            #         y_pred[j] = 1
+            #         j -= 1
+            #     j = i + 1
+            #     while j < len(y_pred) and y_true[j] == 1 and y_pred[j] == 0:
+            #         y_pred[j] = 1
+            #         j += 1
 
         f1 = calculate_f1(y_true, y_pred)
         if f1 > best_f1:
